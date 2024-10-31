@@ -1,3 +1,3 @@
 {
-  "Extension Active": "false"
+  "Extension Active": "true"
 }
