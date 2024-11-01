@@ -4,38 +4,43 @@ body {
     padding: 0;
     background-color: black;
     color: white;
-    overflow-y: scroll;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .fixed-section {
     position: fixed;
-    top: 20px;
-    left: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: #333;
     padding: 20px;
     border-radius: 10px;
-    width: 300px; /* Pevná šířka */
-    z-index: 1000;
+    width: 75%;
+    height: 75%;
+    overflow-y: auto;
 }
 
 .project-icon {
-    width: 100px; /* Šířka ikony */
+    width: 100px;
     height: auto;
     display: block;
-    margin-bottom: 15px;
+    margin: 0 auto 15px auto;
 }
 
 .fixed-section h1 {
     color: red;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .fixed-section p {
     color: green;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .scrollable-content {
-    margin-left: 340px; /* Odstup od pevné sekce */
     padding: 20px;
+    text-align: left;
 }
