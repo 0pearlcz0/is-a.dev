@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kódový Generátor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Kódový Generátor</h1>
+    <div class="input-container">
+        <label for="wordCs">Česky:</label>
+        <input type="text" id="wordCs" placeholder="Zadejte české slovo">
+        <label for="wordEn">Anglicky:</label>
+        <input type="text" id="wordEn" placeholder="Zadejte anglické slovo">
+        <button onclick="addWord()">Přidat</button>
+    </div>
+    <h2>Vygenerovaný kód</h2>
+    <pre id="generatedCode">{}</pre>
+    <script src="script.js"></script>
+</body>
+</html>
