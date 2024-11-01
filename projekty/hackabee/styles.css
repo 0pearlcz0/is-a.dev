@@ -28,7 +28,7 @@ header nav ul li a {
 
 .fixed-section {
     position: fixed;
-    top: 100px;
+    top: 50px; /* Snížení horního odsazení */
     left: 50%;
     transform: translate(-50%, 0);
     background-color: #333;
@@ -41,25 +41,21 @@ header nav ul li a {
 
 .logo-container {
     position: absolute;
-    top: 20px;
+    top: 10px; /* Posun loga více nahoru */
     left: 20px;
-}
-
-.project-icon {
-    width: 150px;
-    height: auto;
 }
 
 .title-container {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    align-items: center; /* Vertikální zarovnání nadpisu */
+    margin-top: 10px; /* Posunutí nadpisu více nahoru */
 }
 
 .centered-title {
     color: red;
-    font-size: 120px; /* Nastavení velikosti nadpisu téměř na velikost loga */
-    line-height: 1; /* Zmenšení mezery mezi řádky pro lepší zarovnání */
+    font-size: 120px;
+    line-height: 1;
 }
 
 .fixed-section p {
