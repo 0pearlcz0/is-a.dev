@@ -41,21 +41,21 @@ header nav ul li a {
 
 .header-content {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    align-items: center; /* Zarovnání na stejnou výšku */
+    gap: 20px; /* Prostor mezi logem a nadpisem */
 }
 
 .project-icon {
-    width: 150px; /* Větší šířka ikony */
+    width: 150px;
     height: auto;
+    margin-right: auto; /* Logo zarovnáno vlevo */
 }
 
 .centered-title {
     color: red;
-    font-size: 36px; /* Větší nadpis */
-    margin-left: auto; /* Odstup od ikony */
-    margin-right: auto; /* Zarovnáno na střed */
+    font-size: 36px;
+    flex-grow: 1; /* Zajistí, že nadpis se bude centrovat ve zbývajícím prostoru */
+    text-align: center; /* Nadpis zarovnán na střed */
 }
 
 .fixed-section p {
