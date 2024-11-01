@@ -16,31 +16,25 @@ body {
     background-color: #333;
     padding: 20px;
     border-radius: 10px;
-    width: 75%;
-    height: 75%;
+    width: 85%; /* Větší šířka */
+    height: 85%; /* Větší výška */
     overflow-y: auto;
 }
 
 .project-icon {
     width: 100px;
     height: auto;
-    display: block;
-    margin: 0 auto 15px auto;
+    float: left; /* Zarovnání na levý bok */
+    margin-right: 20px; /* Odstup od textu */
 }
 
-.fixed-section h1 {
+.centered-title {
     color: red;
-    margin-bottom: 10px;
     text-align: center;
+    margin-bottom: 10px;
 }
 
 .fixed-section p {
     color: green;
     margin-bottom: 10px;
-    text-align: center;
-}
-
-.scrollable-content {
-    padding: 20px;
-    text-align: left;
 }
