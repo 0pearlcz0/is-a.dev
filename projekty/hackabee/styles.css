@@ -42,19 +42,20 @@ header nav ul li a {
 .header-content {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     margin-bottom: 20px;
 }
 
 .project-icon {
     width: 150px; /* Větší šířka ikony */
     height: auto;
-    margin-right: 20px; /* Odstup od nadpisu */
 }
 
 .centered-title {
     color: red;
     font-size: 36px; /* Větší nadpis */
+    margin-left: auto; /* Odstup od ikony */
+    margin-right: auto; /* Zarovnáno na střed */
 }
 
 .fixed-section p {
