@@ -39,28 +39,28 @@ header nav ul li a {
     overflow-y: auto;
 }
 
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
 .project-icon {
     width: 150px; /* Větší šířka ikony */
     height: auto;
-    display: block;
-    margin-left: 0; /* Zarovnáno na levou stranu */
-    margin-bottom: 15px;
+    margin-right: 20px; /* Odstup od nadpisu */
 }
 
 .centered-title {
     color: red;
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 75px; /* Větší nadpis */
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    font-size: 36px; /* Větší nadpis */
 }
 
 .fixed-section p {
     color: green;
     margin-bottom: 20px;
-    text-align: center; /* Zarovnáno vlevo */
+    text-align: left; /* Zarovnáno vlevo */
     font-size: 18px; /* Větší text popisu */
 }
 
