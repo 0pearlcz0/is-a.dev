@@ -53,12 +53,13 @@ header nav ul li a {
 .title-container {
     display: flex;
     justify-content: center;
-    margin-top: 60px;
+    margin-top: 20px;
 }
 
 .centered-title {
     color: red;
-    font-size: 70px;
+    font-size: 120px; /* Nastavení velikosti nadpisu téměř na velikost loga */
+    line-height: 1; /* Zmenšení mezery mezi řádky pro lepší zarovnání */
 }
 
 .fixed-section p {
