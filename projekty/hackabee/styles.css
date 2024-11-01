@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    overflow-y: scroll;
+}
+
+.fixed-section {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px; /* Pevná šířka */
+    z-index: 1000;
+}
+
+.project-icon {
+    width: 100px; /* Šířka ikony */
+    height: auto;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.fixed-section h1 {
+    color: red;
+    margin-bottom: 10px;
+}
+
+.fixed-section p {
+    color: green;
+    margin-bottom: 10px;
+}
+
+.scrollable-content {
+    margin-left: 340px; /* Odstup od pevné sekce */
+    padding: 20px;
+}
