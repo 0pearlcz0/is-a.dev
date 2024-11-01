@@ -60,7 +60,7 @@ header nav ul li a {
 .fixed-section p {
     color: green;
     margin-bottom: 20px;
-    text-align: left; /* Zarovnáno vlevo */
+    text-align: center; /* Zarovnáno vlevo */
     font-size: 18px; /* Větší text popisu */
 }
 
