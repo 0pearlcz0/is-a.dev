@@ -8,6 +8,24 @@ body {
     overflow: hidden;
 }
 
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+header nav ul li {
+    margin: 0;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+}
+
 .fixed-section {
     position: fixed;
     top: 50%;
@@ -22,19 +40,27 @@ body {
 }
 
 .project-icon {
-    width: 100px;
+    width: 150px; /* Větší šířka ikony */
     height: auto;
-    float: left; /* Zarovnání na levý bok */
-    margin-right: 20px; /* Odstup od textu */
+    display: block;
+    margin: 0 auto 15px auto; /* Zarovnáno na střed */
 }
 
 .centered-title {
     color: red;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 36px; /* Větší nadpis */
 }
 
 .fixed-section p {
     color: green;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 18px; /* Větší text popisu */
+}
+
+.scrollable-content {
+    padding: 20px;
+    text-align: left;
 }
