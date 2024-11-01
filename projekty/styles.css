@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+header nav ul li {
+    margin: 0;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #333;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.project-icon {
+    width: 100%;
+    height: auto;
+}
+
+.project-content {
+    padding: 15px;
+}
+
+.project-content h2 {
+    margin: 10px 0;
+    color: red;
+}
+
+.project-content p {
+    color: green;
+}
