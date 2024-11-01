@@ -1,51 +1,43 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    padding: 10px;
-    text-align: center;
-    background-color: #1c1b29;
-    color: #ffffff;
+let wordList = {};
+let wordHistory = [];
+
+function addWord() {
+    const wordCs = document.getElementById('wordCs').value.trim();
+    const wordEn = document.getElementById('wordEn').value.trim();
+
+    if (wordCs && wordEn) {
+        wordList[wordCs] = wordEn;
+        wordList[wordEn] = wordCs;
+        wordHistory.push({ cs: wordCs, en: wordEn });
+        updateCode();
+        clearInputs();
+    }
 }
 
-.input-container {
-    margin-bottom: 20px;
+function removeLastWord() {
+    const lastWord = wordHistory.pop();
+    if (lastWord) {
+        delete wordList[lastWord.cs];
+        delete wordList[lastWord.en];
+        updateCode();
+    }
 }
 
-label {
-    display: block;
-    margin-top: 10px;
+function resetWords() {
+    wordList = {};
+    wordHistory = [];
+    updateCode();
 }
 
-input[type="text"] {
-    padding: 10px;
-    width: calc(100% - 22px);
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #333;
-    color: #fff;
+function updateCode() {
+    const codeContainer = document.getElementById('generatedCode');
+    const formattedCode = JSON.stringify(wordList, null, 4);
+    codeContainer.textContent = formattedCode;
 }
 
-button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-right: 5px;
+function clearInputs() {
+    document.getElementById('wordCs').value = '';
+    document.getElementById('wordEn').value = '';
 }
 
-button:hover {
-    background-color: #45a049;
-}
-
-pre {
-    background-color: #333;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    text-align: left;
-}
+document.addEventListener('DOMContentLoaded', updateCode);
