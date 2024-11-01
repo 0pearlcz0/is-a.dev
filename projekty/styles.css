@@ -31,8 +31,8 @@ main {
 
 .project-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
 }
 
@@ -40,7 +40,8 @@ main {
     background-color: #333;
     border-radius: 10px;
     overflow: hidden;
-    width: 300px;
+    width: 75%; /* Zabírá 75 % šířky */
+    max-width: 800px; /* Maximální šířka */
     cursor: pointer;
     transition: transform 0.3s;
 }
