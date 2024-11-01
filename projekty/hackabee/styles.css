@@ -28,14 +28,14 @@ header nav ul li a {
 
 .fixed-section {
     position: fixed;
-    top: 50%;
+    top: 100px; /* Posunuto níže, aby se nedotýkalo headeru */
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0);
     background-color: #333;
     padding: 20px;
     border-radius: 10px;
-    width: 85%; /* Větší šířka */
-    height: 85%; /* Větší výška */
+    width: 85%;
+    height: 85%;
     overflow-y: auto;
 }
 
@@ -43,7 +43,8 @@ header nav ul li a {
     width: 150px; /* Větší šířka ikony */
     height: auto;
     display: block;
-    margin: 0 auto 15px auto; /* Zarovnáno na střed */
+    margin-left: 0; /* Zarovnáno na levou stranu */
+    margin-bottom: 15px;
 }
 
 .centered-title {
@@ -51,12 +52,15 @@ header nav ul li a {
     text-align: center;
     margin-bottom: 20px;
     font-size: 36px; /* Větší nadpis */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .fixed-section p {
     color: green;
     margin-bottom: 20px;
-    text-align: center;
+    text-align: left; /* Zarovnáno vlevo */
     font-size: 18px; /* Větší text popisu */
 }
 
