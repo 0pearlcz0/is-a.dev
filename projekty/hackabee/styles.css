@@ -58,13 +58,8 @@ header nav ul li a {
     line-height: 1;
 }
 
-.fixed-section p {
-    color: green;
-    margin-top: 100px; /* Oddělit text od nadpisu a loga */
-    font-size: 18px;
-}
-
 .scrollable-content {
     padding: 20px;
     text-align: left;
+    color: green; /* Barva textu obsahu */
 }
