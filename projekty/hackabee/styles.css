@@ -2,17 +2,17 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1a1a1a; /* Slightly lighter black */
-    color: #f2f2f2; /* Slightly lighter white for better readability */
+    background-color: black; /* Background color set to black */
+    color: white;
     height: 100vh;
-    overflow: hidden;
+    overflow: hidden; /* Hides the scroll bar */
 }
 
 header nav ul {
     list-style-type: none;
     padding: 0;
     display: flex;
-    justify-content: center; /* Centered navigation */
+    justify-content: center;
     background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -28,15 +28,15 @@ header nav ul li a {
 
 .fixed-section {
     position: fixed;
-    top: 70px; /* Increased top margin */
+    top: 70px; 
     left: 50%;
     transform: translate(-50%, 0);
     background-color: #333;
     padding: 20px;
     border-radius: 10px;
     width: 80%;
-    height: calc(100% - 100px); /* Better fitting within the viewport */
-    overflow-y: auto;
+    height: calc(100% - 100px);
+    overflow-y: hidden; /* Hides the scroll bar */
 }
 
 .header-content {
@@ -47,20 +47,24 @@ header nav ul li a {
 }
 
 .project-icon {
-    width: 40px; /* Adjusted logo size */
-    height: 40px; /* Ensures the logo maintains its aspect ratio */
+    width: 40px;
+    height: 40px;
     margin-right: 10px;
+}
+
+.centered-title {
+    color: #ff4500;
+    font-size: 3rem;
+    line-height: 1;
 }
 
 .scrollable-content {
     padding: 20px;
     text-align: center; /* Center-aligned text */
-    color: #00ff00;
+    color: #00ff00; /* Adjusted green for better readability */
 }
 
-
-.centered-title {
-    color: #ff4500; /* Slightly warmer red */
-    font-size: 3rem; /* More manageable size */
-    line-height: 1;
+.scrollable-content ul {
+    list-style-type: none; /* Removes the green bullet points */
+    padding: 0;
 }
