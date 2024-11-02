@@ -12,7 +12,7 @@ header nav ul {
     list-style-type: none;
     padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     background-color: rgba(0, 0, 0, 0.8);
 }
 
