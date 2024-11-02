@@ -2,8 +2,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: black;
-    color: white;
+    background-color: #1a1a1a; /* Slightly lighter black */
+    color: #f2f2f2; /* Slightly lighter white for better readability */
     height: 100vh;
     overflow: hidden;
 }
@@ -12,7 +12,7 @@ header nav ul {
     list-style-type: none;
     padding: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: center; /* Centered navigation */
     background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -28,38 +28,36 @@ header nav ul li a {
 
 .fixed-section {
     position: fixed;
-    top: 50px; /* Snížení horního odsazení */
+    top: 70px; /* Increased top margin */
     left: 50%;
     transform: translate(-50%, 0);
     background-color: #333;
     padding: 20px;
     border-radius: 10px;
-    width: 85%;
-    height: 85%;
+    width: 80%;
+    height: calc(100% - 100px); /* Better fitting within the viewport */
     overflow-y: auto;
 }
 
-.logo-container {
-    position: absolute;
-    top: 10px; /* Posun loga více nahoru */
-    left: 20px;
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
-.title-container {
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Vertikální zarovnání nadpisu */
-    margin-top: 10px; /* Posunutí nadpisu více nahoru */
+.project-icon {
+    margin-right: 10px;
 }
 
 .centered-title {
-    color: red;
-    font-size: 120px;
+    color: #ff4500; /* Slightly warmer red */
+    font-size: 3rem; /* More manageable size */
     line-height: 1;
 }
 
 .scrollable-content {
     padding: 20px;
     text-align: left;
-    color: green; /* Barva textu obsahu */
+    color: #00ff00; /* Adjusted green for better readability */
 }
