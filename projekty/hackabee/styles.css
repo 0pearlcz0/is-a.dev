@@ -62,6 +62,7 @@ header nav ul li a {
 .scrollable-content {
     padding: 20px;
     text-align: center;
+    overflow-y: hidden; /* Hide vertical scrollbar */
     color: white; /* Changes description text to white */
 }
 
