@@ -2,10 +2,10 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: black; /* Background color set to black */
+    background-color: black;
     color: white;
     height: 100vh;
-    overflow: hidden; /* Hides the scroll bar */
+    overflow: hidden;
 }
 
 header nav ul {
@@ -28,7 +28,7 @@ header nav ul li a {
 
 .fixed-section {
     position: fixed;
-    top: 70px; 
+    top: 70px;
     left: 50%;
     transform: translate(-50%, 0);
     background-color: #333;
@@ -36,35 +36,36 @@ header nav ul li a {
     border-radius: 10px;
     width: 80%;
     height: calc(100% - 100px);
-    overflow-y: hidden; /* Hides the scroll bar */
+    overflow-y: auto; /* Fixes the scrolling issue */
 }
 
 .header-content {
     display: flex;
+    flex-direction: column; /* Changes direction to column */
     align-items: center;
-    justify-content: center;
     margin-bottom: 20px;
 }
 
 .project-icon {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
+    width: 80px; /* Increases the icon size */
+    height: 80px; /* Ensures the logo maintains its aspect ratio */
+    margin-bottom: 10px; /* Adds spacing below the icon */
 }
 
 .centered-title {
-    color: #f8f8f8;
+    color: #ff4500;
     font-size: 3rem;
     line-height: 1;
+    margin: 0; /* Removes default margin */
 }
 
 .scrollable-content {
     padding: 20px;
-    text-align: center; /* Center-aligned text */
-    color: #f8f8f8; /* Adjusted green for better readability */
+    text-align: center;
+    color: #00ff00;
 }
 
 .scrollable-content ul {
-    list-style-type: none; /* Removes the green bullet points */
+    list-style-type: none; /* Removes the bullet points */
     padding: 0;
 }
