@@ -47,17 +47,20 @@ header nav ul li a {
 }
 
 .project-icon {
+    width: 40px; /* Adjusted logo size */
+    height: 40px; /* Ensures the logo maintains its aspect ratio */
     margin-right: 10px;
 }
+
+.scrollable-content {
+    padding: 20px;
+    text-align: center; /* Center-aligned text */
+    color: #00ff00;
+}
+
 
 .centered-title {
     color: #ff4500; /* Slightly warmer red */
     font-size: 3rem; /* More manageable size */
     line-height: 1;
-}
-
-.scrollable-content {
-    padding: 20px;
-    text-align: left;
-    color: #00ff00; /* Adjusted green for better readability */
 }
