@@ -53,7 +53,7 @@ header nav ul li a {
 }
 
 .centered-title {
-    color: #ff4500;
+    color: #f8f8f8;
     font-size: 3rem;
     line-height: 1;
 }
@@ -61,7 +61,7 @@ header nav ul li a {
 .scrollable-content {
     padding: 20px;
     text-align: center; /* Center-aligned text */
-    color: #00ff00; /* Adjusted green for better readability */
+    color: #f8f8f8; /* Adjusted green for better readability */
 }
 
 .scrollable-content ul {
