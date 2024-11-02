@@ -62,12 +62,10 @@ header nav ul li a {
 .scrollable-content {
     padding: 20px;
     text-align: center;
-    overflow-y: hidden; /* Hide vertical scrollbar */
     color: white; /* Changes description text to white */
 }
 
 .scrollable-content ul {
     list-style-type: none; /* Removes the bullet points */
-    overflow-y: hidden; /* Hide vertical scrollbar */
     padding: 0;
 }
