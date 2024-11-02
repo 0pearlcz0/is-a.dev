@@ -68,5 +68,6 @@ header nav ul li a {
 
 .scrollable-content ul {
     list-style-type: none; /* Removes the bullet points */
+    overflow-y: hidden; /* Hide vertical scrollbar */
     padding: 0;
 }
