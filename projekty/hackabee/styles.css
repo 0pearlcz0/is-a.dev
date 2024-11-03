@@ -36,36 +36,61 @@ header nav ul li a {
     border-radius: 10px;
     width: 80%;
     height: calc(100% - 100px);
-    overflow-y: auto; /* Fixes the scrolling issue */
+    overflow-y: auto;
 }
 
 .header-content {
     display: flex;
-    flex-direction: column; /* Changes direction to column */
+    flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
 }
 
 .project-icon {
-    width: 80px; /* Increases the icon size */
-    height: 80px; /* Ensures the logo maintains its aspect ratio */
-    margin-bottom: 10px; /* Adds spacing below the icon */
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
 }
 
 .centered-title {
-    color: #ebebeb; /* Color for the title */
+    color: #ebebeb;
     font-size: 3rem;
     line-height: 1;
-    margin: 0; /* Removes default margin */
+    margin: 0;
 }
 
 .scrollable-content {
     padding: 20px;
     text-align: center;
-    color: white; /* Changes description text to white */
+    color: white;
 }
 
 .scrollable-content ul {
-    list-style-type: none; /* Removes the bullet points */
+    list-style-type: none;
     padding: 0;
+}
+
+footer {
+    background-color: #333;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footer-menu ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-menu ul li {
+    margin: 0 15px;
+}
+
+.footer-menu ul li a {
+    color: white;
+    text-decoration: none;
 }
