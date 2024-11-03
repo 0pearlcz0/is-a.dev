@@ -72,8 +72,8 @@ header nav ul li a {
 
 .footer-menu {
     display: flex;
-    justify-content: center; /* Centers the footer menu */
-    background-color: #333; /* Gray background color */
+    justify-content: center;
+    background-color: #333;
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -83,14 +83,16 @@ header nav ul li a {
     list-style-type: none;
     padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-around; /* Similar to the top menu */
+    width: 50%; /* Centered and spaced out */
 }
 
 .footer-menu ul li {
-    margin: 0 15px;
+    margin: 0;
 }
 
 .footer-menu ul li a {
     color: white;
     text-decoration: none;
+    padding: 15px; /* Similar to the top menu */
 }
