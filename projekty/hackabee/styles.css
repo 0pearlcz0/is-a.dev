@@ -70,13 +70,13 @@ header nav ul li a {
     padding: 0;
 }
 
-footer {
-    background-color: #333;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
+.footer-menu {
+    display: flex;
+    justify-content: center; /* Centers the footer menu */
+    background-color: #333; /* Gray background color */
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 .footer-menu ul {
