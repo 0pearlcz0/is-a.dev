@@ -9,7 +9,7 @@
     <link rel="manifest" href="/favicon/site.webmanifest" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moje Projekty</title>
+    <title>Hack a Bee</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -22,33 +22,44 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <h1>Moje Projekty</h1>
-        <div class="project-container">
-            <div class="project-card" onclick="location.href='https://pearlcz.is-a.dev/projekty/hackabee'">
-                <img src="https://i.imgur.com/l067M48.png" alt="Ikonka projektu 1" class="project-icon">
-                <div class="project-content">
-                    <h2>Hack a Bee</h2>
-                    <p>Extension do prohlížeče - Hack na edukativní stránku WocaBee. Zahrnuje instatní odpovědi a automatické odpovídání.</p>
-                </div>
-            </div>
-            <div class="project-card" onclick="location.href='https://pearlcz.is-a.dev/projekty/blockburst'">
-                <img src="https://i.imgur.com/HXrOGjl.png" alt="Ikonka projektu 2" class="project-icon">
-                <div class="project-content">
-                    <h2>Block Burst</h2>
-                    <p>Popis projektu 2.</p>
-                </div>
-            </div>
-            <div class="project-card" onclick="location.href='https://pearlcz.is-a.dev/projekty/pearlhosting'">
-                <img src="https://i.imgur.com/otj20Ol.png" alt="Ikonka projektu 3" class="project-icon">
-                <div class="project-content">
-                    <h2>Pearl Hosting</h2>
-                    <p>Popis projektu 2.</p>
-                </div>
-            </div>
-            <!-- Přidat další projekty -->
+    <div class="fixed-section">
+        <div class="footer-menu">
+            <ul>
+                <li><a style="color:blue;" href="/projekty/hackabee/">Overview</a></li>
+                <li><a href="/projekty/hackabee/feedback">Feedback</a></li>
+            </ul>
         </div>
-    </main>
+        <div class="header-content">
+            <img src="https://i.imgur.com/l067M48.png" alt="Ikona projektu" class="project-icon">
+            <h1 class="centered-title">Hack a Bee</h1>
+        </div>
+        <div class="scrollable-content">
+            <h2>How to install</h2>
+            <p>Download as Browser Extension on opera addons store or edge addons store:</p>
+            <ul>
+                <li>• Opera addons store <a href="LINK">https://</a></li>
+                <li>• Edge addons store <a href="LINK">https://</a></li>
+            </ul>
+
+            <h2>How to activate</h2>
+            <p>You need to use license key to activate the extension that you can get by typing your e-mail in the Issues category.</p>
+
+            <h2>How to use</h2>
+            <p>After activating you must go to <a href="https://wocabee.app/app/">https://wocabee.app/app/</a> and use CTRL to instant answer.</p>
+
+            <h2>Features</h2>
+            <ul>
+                <li>• Instant Answer</li>
+                <li>• Auto Answer</li>
+            </ul>
+
+            <h2>To do list</h2>
+            <ul>
+                <li>• Voice Hack</li>
+                <li>• Stop on specific points count</li>
+            </ul>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
