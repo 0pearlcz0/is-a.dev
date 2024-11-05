@@ -43,6 +43,11 @@ main {
     padding: 15px;
     border-radius: 10px;
     width: 300px; /* Adjust as needed */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.contact-item:hover {
+    transform: scale(1.05); /* Slightly larger on hover */
 }
 
 .contact-icon {
