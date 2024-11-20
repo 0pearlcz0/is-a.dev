@@ -22,17 +22,30 @@ document.getElementById('addBtn').addEventListener('click', function() {
         li.innerHTML = `
             <span>${datum} - ${jmeno} dluží ${castka} Kč: ${popis}</span>
             <input type="checkbox" class="checkbox">
-            <button class="delete-btn">🗑️</button>
+            <button class="menu-btn">⋮</button>
+            <div class="menu">
+                <button class="delete">Smazat</button>
+                <button class="edit">Upravit</button>
+            </div>
         `;
 
         li.querySelector('.checkbox').addEventListener('change', function() {
             li.classList.toggle('completed');
         });
 
-        li.querySelector('.delete-btn').addEventListener('click', function() {
+        li.querySelector('.menu-btn').addEventListener('click', function() {
+            const menu = li.querySelector('.menu');
+            menu.style.display = menu.style.display === 'none' || menu.style.display === '' ? 'flex' : 'none';
+        });
+
+        li.querySelector('.delete').addEventListener('click', function() {
             if (confirm('Opravdu chcete odstranit tuto položku?')) {
                 li.remove();
             }
+        });
+
+        li.querySelector('.edit').addEventListener('click', function() {
+            alert('Funkce Upravit zatím není implementována.');
         });
 
         document.getElementById('seznam').appendChild(li);
@@ -41,7 +54,7 @@ document.getElementById('addBtn').addEventListener('click', function() {
         document.getElementById('jmeno').value = '';
         document.getElementById('castka').value = '';
         document.getElementById('popis').value = '';
-        
+
         const toggleFormBtn = document.getElementById('toggleFormBtn');
         form.style.display = 'none';
         toggleFormBtn.classList.remove('cross');
