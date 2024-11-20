@@ -83,14 +83,13 @@ li.completed {
 }
 
 .delete-btn {
-    background-color: #ff1744;
-    color: #ffffff;
+    background: none;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
-    margin-left: 10px;
+    color: #ff1744;
+    font-size: 20px;
 }
 
 .delete-btn:hover {
-    background-color: #d50000;
+    color: #d50000;
 }
