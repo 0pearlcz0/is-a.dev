@@ -18,6 +18,25 @@ h1 {
     margin-bottom: 20px;
 }
 
+#toggleFormBtn {
+    display: block;
+    margin: 0 auto 20px auto;
+    background-color: #6200ee;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 40px;
+}
+
+#toggleFormBtn:hover {
+    background-color: #3700b3;
+}
+
 .form-group {
     display: flex;
     flex-direction: column;
