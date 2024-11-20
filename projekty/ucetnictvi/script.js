@@ -26,9 +26,12 @@ document.getElementById('addBtn').addEventListener('click', function() {
             li.classList.toggle('completed');
         });
 
-        li.querySelector('.menu-btn').addEventListener('click', function() {
-            const menu = li.querySelector('.menu');
-            menu.style.display = menu.style.display === 'none' || menu.style.display === '' ? 'flex' : 'none';
+        li.querySelector('.menu-btn').addEventListener('mouseover', function() {
+            li.querySelector('.menu').style.display = 'flex';
+        });
+
+        li.addEventListener('mouseleave', function() {
+            li.querySelector('.menu').style.display = 'none';
         });
 
         li.querySelector('.delete').addEventListener('click', function() {
