@@ -1,1 +1,23 @@
-
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seznam půjček</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Seznam půjček</h1>
+        <div class="form-group">
+            <input type="date" id="datum">
+            <input type="text" id="jmeno" placeholder="Kdo dluží">
+            <input type="number" id="castka" placeholder="Částka">
+            <input type="text" id="popis" placeholder="Popis půjčky">
+            <button id="addBtn">+</button>
+        </div>
+        <ul id="seznam"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
