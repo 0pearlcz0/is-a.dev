@@ -9,12 +9,13 @@
 <body>
     <div class="container">
         <h1>Seznam půjček</h1>
-        <div class="form-group">
+        <button id="toggleFormBtn">+</button>
+        <div class="form-group" id="form" style="display: none;">
             <input type="date" id="datum">
             <input type="text" id="jmeno" placeholder="Kdo dluží">
             <input type="number" id="castka" placeholder="Částka">
             <input type="text" id="popis" placeholder="Popis půjčky">
-            <button id="addBtn">+</button>
+            <button id="addBtn">Uložit</button>
         </div>
         <ul id="seznam"></ul>
     </div>
