@@ -1,14 +1,7 @@
 document.getElementById('toggleFormBtn').addEventListener('click', function() {
     const form = document.getElementById('form');
-    if (form.style.display === 'none') {
-        form.style.display = 'block';
-        this.classList.remove('plus');
-        this.classList.add('cross');
-    } else {
-        form.style.display = 'none';
-        this.classList.remove('cross');
-        this.classList.add('plus');
-    }
+    form.style.display = form.style.display === 'none' ? 'block' : 'none';
+    this.classList.toggle('cross');
 });
 
 document.getElementById('addBtn').addEventListener('click', function() {
@@ -45,7 +38,15 @@ document.getElementById('addBtn').addEventListener('click', function() {
         });
 
         li.querySelector('.edit').addEventListener('click', function() {
-            alert('Funkce Upravit zatím není implementována.');
+            document.getElementById('datum').value = datum;
+            document.getElementById('jmeno').value = jmeno;
+            document.getElementById('castka').value = castka;
+            document.getElementById('popis').value = popis;
+
+            document.getElementById('form').style.display = 'block';
+            document.getElementById('toggleFormBtn').classList.add('cross');
+            
+            li.remove();
         });
 
         document.getElementById('seznam').appendChild(li);
@@ -56,9 +57,8 @@ document.getElementById('addBtn').addEventListener('click', function() {
         document.getElementById('popis').value = '';
 
         const toggleFormBtn = document.getElementById('toggleFormBtn');
-        form.style.display = 'none';
+        document.getElementById('form').style.display = 'none';
         toggleFormBtn.classList.remove('cross');
-        toggleFormBtn.classList.add('plus');
     } else {
         alert('Vyplňte všechny údaje.');
     }
