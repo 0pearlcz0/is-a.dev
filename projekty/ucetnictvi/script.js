@@ -2,7 +2,7 @@ document.getElementById('toggleFormBtn').addEventListener('click', function() {
     const form = document.getElementById('form');
     if (form.style.display === 'none') {
         form.style.display = 'block';
-        this.textContent = 'Uložit';
+        this.textContent = '+';
     } else {
         const datum = document.getElementById('datum').value || new Date().toISOString().split('T')[0];
         const jmeno = document.getElementById('jmeno').value;
