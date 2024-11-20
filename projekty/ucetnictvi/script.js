@@ -14,7 +14,7 @@ document.getElementById('addBtn').addEventListener('click', function() {
         li.innerHTML = `
             <span>${datum} - ${jmeno} dluží ${castka} Kč: ${popis}</span>
             <input type="checkbox" class="checkbox">
-            <button class="delete-btn">Odstranit</button>
+            <button class="delete-btn">🗑️</button>
         `;
 
         li.querySelector('.checkbox').addEventListener('change', function() {
