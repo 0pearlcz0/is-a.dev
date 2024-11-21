@@ -12,13 +12,47 @@ document.getElementById('addBtn').addEventListener('click', function() {
 
     if (jmeno && castka && popis) {
         const li = document.createElement('li');
-        li.innerHTML = `<span>${datum} - ${jmeno} dluží ${castka} Kč: ${popis}</span>`;
-        document.getElementById('seznam').appendChild(li);
+        li.innerHTML = `
+            <span>${datum} - ${jmeno} dluží ${castka} Kč: ${popis}</span>
+            <input type="checkbox" class="checkbox">
+            <button class="menu-btn">⋮</button>
+            <div class="menu">
+                <button class="delete">Smazat</button>
+                <button class="edit">Upravit</button>
+            </div>
+        `;
 
-        document.getElementById('datum').value = '';
-        document.getElementById('jmeno').value = '';
-        document.getElementById('castka').value = '';
-        document.getElementById('popis').value = '';
+        li.querySelector('.checkbox').addEventListener('change', function() {
+            li.classList.toggle('completed');
+        });
+
+        li.querySelector('.menu-btn').addEventListener('mouseover', function() {
+            li.querySelector('.menu').style.display = 'flex';
+        });
+
+        li.addEventListener('mouseleave', function() {
+            li.querySelector('.menu').style.display = 'none';
+        });
+
+        li.querySelector('.delete').addEventListener('click', function() {
+            if (confirm('Opravdu chcete odstranit tuto položku?')) {
+                li.remove();
+            }
+        });
+
+        li.querySelector('.edit').addEventListener('click', function() {
+            document.getElementById('datum').value = datum;
+            document.getElementById('jmeno').value = jmeno;
+            document.getElementById('castka').value = castka;
+            document.getElementById('popis').value = popis;
+
+            document.getElementById('form').style.display = 'block';
+            document.getElementById('toggleFormBtn').classList.add('cross');
+            
+            li.remove();
+        });
+
+        document.getElementById('seznam').appendChild(li);
     } else {
         alert('Vyplňte všechny údaje.');
     }
