@@ -88,41 +88,43 @@ li.completed {
     text-decoration: line-through;
 }
 
-.checkbox {
-    cursor: pointer;
+.sort-controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
 }
 
-.menu-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
+.sort-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.sort-btn {
+    background-color: #6200ee;
     color: #ffffff;
-    font-size: 20px;
-    transition: color 0.3s ease;
-}
-
-.menu-btn:hover {
-    color: #888888;
-}
-
-.menu {
-    position: absolute;
-    right: 10px;
-    background-color: #333333;
+    border: none;
+    padding: 10px 15px;
     border-radius: 4px;
-    display: none;
-    flex-direction: column;
-}
-
-.menu button {
-    background: none;
-    border: none;
-    color: #ffffff;
-    padding: 10px;
     cursor: pointer;
-    text-align: left;
+    transition: background-color 0.3s ease;
 }
 
-.menu button:hover {
-    background-color: #444444;
+.sort-btn:hover {
+    background-color: #3700b3;
+}
+
+.arrow {
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.arrow[data-order="asc"] {
+    transform: rotate(0deg);
+}
+
+.arrow[data-order="desc"] {
+    transform: rotate(180deg);
 }
