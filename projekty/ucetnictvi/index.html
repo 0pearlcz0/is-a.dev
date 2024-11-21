@@ -23,6 +23,22 @@
             <input type="text" id="popis" placeholder="Popis půjčky">
             <button id="addBtn">Uložit</button>
         </div>
+
+        <div class="sort-controls">
+            <div class="sort-group">
+                <button class="sort-btn" data-sort="datum">Datum</button>
+                <span class="arrow" data-order="asc">▲</span>
+            </div>
+            <div class="sort-group">
+                <button class="sort-btn" data-sort="jmeno">Jméno</button>
+                <span class="arrow" data-order="asc">▲</span>
+            </div>
+            <div class="sort-group">
+                <button class="sort-btn" data-sort="castka">Částka</button>
+                <span class="arrow" data-order="asc">▲</span>
+            </div>
+        </div>
+
         <ul id="seznam"></ul>
     </div>
     <script src="script.js"></script>
