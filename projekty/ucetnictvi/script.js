@@ -72,6 +72,6 @@ document.getElementById('sortBtn').addEventListener('click', function() {
     sortOptions.style.display = sortOptions.style.display === 'none' || sortOptions.style.display === '' ? 'flex' : 'none';
 });
 
-document.querySelectorAll('.sort-options button').forEach(button => {
+document.querySelectorAll('.sort-options button[data-sort]').forEach(button => {
     button.addEventListener('click', function() {
-
+        const sortBy = this.dataset
