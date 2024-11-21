@@ -92,55 +92,14 @@ li.completed {
     cursor: pointer;
 }
 
-.menu-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #ffffff;
-    font-size: 20px;
-    transition: color 0.3s ease;
-}
-
-.menu-btn:hover {
-    color: #888888;
-}
-
-.menu {
-    position: absolute;
-    right: 10px;
-    background-color: #333333;
-    border-radius: 4px;
-    display: none;
-    flex-direction: column;
-}
-
-.menu button {
-    background: none;
-    border: none;
-    color: #ffffff;
-    padding: 10px;
-    cursor: pointer;
-    text-align: left;
-}
-
-.menu button:hover {
-    background-color: #444444;
-}
-
-.sort-controls {
+.sort-wrapper {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    align-items: center;
+    gap: 10px;
     margin-bottom: 20px;
 }
 
-.sort-group {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.sort-btn {
+#sortToggle {
     background-color: #6200ee;
     color: #ffffff;
     border: none;
@@ -150,7 +109,7 @@ li.completed {
     transition: background-color 0.3s ease;
 }
 
-.sort-btn:hover {
+#sortToggle:hover {
     background-color: #3700b3;
 }
 
@@ -166,4 +125,30 @@ li.completed {
 
 .arrow[data-order="desc"] {
     transform: rotate(180deg);
+}
+
+.sort-menu {
+    position: absolute;
+    background-color: #333333;
+    border: 1px solid #444;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    z-index: 100;
+}
+
+.sort-option {
+    background: none;
+    border: none;
+    color: #ffffff;
+    padding: 10px;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.sort-option:hover {
+    background-color: #444444;
 }
