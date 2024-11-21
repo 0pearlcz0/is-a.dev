@@ -66,3 +66,11 @@ document.getElementById('addBtn').addEventListener('click', function() {
         alert('Vyplňte všechny údaje.');
     }
 });
+
+document.getElementById('sortBtn').addEventListener('click', function() {
+    const sortOptions = document.querySelector('.sort-options');
+    sortOptions.style.display = sortOptions.style.display === 'none' || sortOptions.style.display === '' ? 'flex' : 'none';
+});
+
+document.querySelectorAll('.sort-options button').forEach(button => {
+    button.addEventListener('click', function() {
