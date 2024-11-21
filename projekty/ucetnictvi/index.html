@@ -15,23 +15,13 @@
 <body>
     <div class="container">
         <h1>Seznam půjček</h1>
-        <div class="header">
-            <button id="toggleFormBtn" class="plus">+</button>
-            <div class="sort-menu">
-                <button id="sortBtn">Seřadit <span id="orderArrow">↑</span></button>
-                <div class="sort-options" style="display: none;">
-                    <button data-sort="datum">Datum</button>
-                    <button data-sort="jmeno">Jméno</button>
-                    <button data-sort="castka">Částka</button>
-                </div>
-            </div>
-        </div>
+        <button id="toggleFormBtn" class="plus">+</button>
         <div class="form-group" id="form" style="display: none;">
             <input type="date" id="datum">
             <input type="text" id="jmeno" placeholder="Kdo dluží">
             <input type="number" id="castka" placeholder="Částka" step="0.01" min="0">
             <input type="text" id="popis" placeholder="Popis půjčky">
-            <button id="addBtn">Uložit</button>
+            <button id="addBtn">+</button>
         </div>
         <ul id="seznam"></ul>
     </div>
