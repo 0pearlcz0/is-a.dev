@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-    <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seznam půjček</title>
@@ -23,18 +18,13 @@
             <button id="addBtn">Uložit</button>
         </div>
 
-        <div class="sort-controls">
-            <div class="sort-group">
-                <button class="sort-btn" data-sort="datum">Datum</button>
-                <span class="arrow" data-order="asc">▲</span>
-            </div>
-            <div class="sort-group">
-                <button class="sort-btn" data-sort="jmeno">Jméno</button>
-                <span class="arrow" data-order="asc">▲</span>
-            </div>
-            <div class="sort-group">
-                <button class="sort-btn" data-sort="castka">Částka</button>
-                <span class="arrow" data-order="asc">▲</span>
+        <div class="sort-wrapper">
+            <button id="sortToggle">Seřadit</button>
+            <span id="sortArrow" class="arrow" data-order="asc">▲</span>
+            <div id="sortMenu" class="sort-menu" style="display: none;">
+                <button class="sort-option" data-sort="datum">Podle datumu</button>
+                <button class="sort-option" data-sort="jmeno">Podle jména</button>
+                <button class="sort-option" data-sort="castka">Podle částky</button>
             </div>
         </div>
 
