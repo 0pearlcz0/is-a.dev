@@ -88,6 +88,45 @@ li.completed {
     text-decoration: line-through;
 }
 
+.checkbox {
+    cursor: pointer;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.menu-btn:hover {
+    color: #888888;
+}
+
+.menu {
+    position: absolute;
+    right: 10px;
+    background-color: #333333;
+    border-radius: 4px;
+    display: none;
+    flex-direction: column;
+}
+
+.menu button {
+    background: none;
+    border: none;
+    color: #ffffff;
+    padding: 10px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.menu button:hover {
+    background-color: #444444;
+}
+
 .sort-controls {
     display: flex;
     justify-content: center;
