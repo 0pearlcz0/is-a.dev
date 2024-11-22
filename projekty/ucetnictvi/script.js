@@ -1,9 +1,11 @@
+// Tlačítko + / x pro zobrazení formuláře
 document.getElementById('toggleFormBtn').addEventListener('click', function () {
     const form = document.getElementById('form');
     form.style.display = form.style.display === 'none' ? 'block' : 'none';
     this.classList.toggle('cross');
 });
 
+// Přidání nové položky do seznamu
 document.getElementById('addBtn').addEventListener('click', function () {
     const datum = document.getElementById('datum').value || new Date().toISOString().split('T')[0];
     const jmeno = document.getElementById('jmeno').value;
@@ -12,42 +14,34 @@ document.getElementById('addBtn').addEventListener('click', function () {
 
     if (jmeno && castka && popis) {
         const li = document.createElement('li');
-        li.innerHTML = `<span>${datum} - ${jmeno} dluží ${castka} Kč: ${popis}</span><input type="checkbox" class="checkbox">`;
+        li.innerHTML = `
+            <span>${datum} - ${jmeno} dluží ${castka} Kč: ${popis}</span>
+            <input type="checkbox" class="checkbox">
+            <span class="settings">•••</span>
+        `;
+
+        // Zaškrtnutí položky jako splněné
+        li.querySelector('.checkbox').addEventListener('change', function () {
+            li.classList.toggle('completed');
+        });
+
+        // Nastavení (úprava/smazání)
+        li.querySelector('.settings').addEventListener('click', function () {
+            alert('Nastavení této položky není implementováno.');
+        });
 
         document.getElementById('seznam').appendChild(li);
 
+        // Vyčištění formuláře
         document.getElementById('datum').value = '';
         document.getElementById('jmeno').value = '';
         document.getElementById('castka').value = '';
         document.getElementById('popis').value = '';
+
+        // Zavření formuláře
+        document.getElementById('form').style.display = 'none';
+        document.getElementById('toggleFormBtn').classList.remove('cross');
     } else {
         alert('Vyplňte všechny údaje.');
     }
-});
-
-document.getElementById('sortArrow').addEventListener('click', function () {
-    const order = this.dataset.order;
-    this.dataset.order = order === 'asc' ? 'desc' : 'asc';
-});
-
-document.querySelectorAll('.sort-option').forEach(option => {
-    option.addEventListener('click', function () {
-        const sortKey = this.dataset.sort;
-        const order = document.getElementById('sortArrow').dataset.order;
-        const ul = document.getElementById('seznam');
-        const items = Array.from(ul.children);
-
-        items.sort((a, b) => {
-            const [fieldA, fieldB] = sortKey === 'datum'
-                ? [new Date(a.textContent.split(' - ')[0]), new Date(b.textContent.split(' - ')[0])]
-                : sortKey === 'castka'
-                ? [parseFloat(a.textContent.split('dluží')[1]), parseFloat(b.textContent.split('dluží')[1])]
-                : [a.textContent.split(' - ')[1], b.textContent.split(' - ')[1]];
-
-            return order === 'asc' ? fieldA > fieldB ? 1 : -1 : fieldA < fieldB ? 1 : -1;
-        });
-
-        ul.innerHTML = '';
-        items.forEach(item => ul.appendChild(item));
-    });
 });
