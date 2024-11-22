@@ -14,14 +14,13 @@ document.getElementById('addBtn').addEventListener('click', function () {
         const li = document.createElement('li');
         li.innerHTML = `
             <span>${datum} - ${jmeno} dluží ${castka} Kč: ${popis}</span>
-            <span class="settings">•••</span>
+            <div class="settings">•••
+                <div class="settings-menu">
+                    <button class="settings-option" onclick="editItem(this)">Upravit</button>
+                    <button class="settings-option" onclick="deleteItem(this)">Odstranit</button>
+                </div>
+            </div>
         `;
-
-        li.querySelector('.settings').addEventListener('click', function () {
-            const action = confirm('Odstranit tuto položku?');
-            if (action) li.remove();
-        });
-
         document.getElementById('seznam').appendChild(li);
         document.getElementById('form').style.display = 'none';
         document.getElementById('toggleFormBtn').classList.remove('cross');
@@ -30,3 +29,17 @@ document.getElementById('addBtn').addEventListener('click', function () {
     }
 });
 
+function deleteItem(btn) {
+    if (confirm('Opravdu chcete odstranit tuto položku?')) {
+        btn.closest('li').remove();
+    }
+}
+
+function editItem(btn) {
+    alert('Funkce pro úpravu není ještě implementována.');
+}
+
+document.getElementById('sortArrow').addEventListener('click', function () {
+    const order = this.dataset.order;
+    this.dataset.order = order === 'asc' ? 'desc' : 'asc';
+});
