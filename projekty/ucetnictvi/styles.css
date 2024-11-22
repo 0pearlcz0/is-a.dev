@@ -21,7 +21,9 @@ h1 {
 #toggleFormBtn {
     display: block;
     margin: 0 auto 20px auto;
-    background-color: #6200ee;
+    background: linear-gradient(45deg, #6200ee, #ff0000, #00ff00);
+    background-size: 300% 300%;
+    animation: gradient-animation 5s infinite;
     color: #ffffff;
     border: none;
     border-radius: 50%;
@@ -31,16 +33,17 @@ h1 {
     cursor: pointer;
     text-align: center;
     line-height: 50px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
-#toggleFormBtn.plus {
-    transform: rotate(0);
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 #toggleFormBtn.cross {
     transform: rotate(45deg);
-    background-color: #3700b3;
 }
 
 .form-group {
@@ -92,16 +95,10 @@ li.completed {
     cursor: pointer;
 }
 
-.main-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
 .sort-wrapper {
     position: relative;
     display: inline-block;
-    margin-left: 20px;
+    margin-bottom: 20px;
 }
 
 #sortToggle {
