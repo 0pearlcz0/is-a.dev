@@ -1,3 +1,97 @@
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background-color: #1e1e1e;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#toggleFormBtn {
+    display: block;
+    margin: 0 auto 20px auto;
+    background-color: #6200ee;
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 50px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#toggleFormBtn.plus {
+    transform: rotate(0);
+}
+
+#toggleFormBtn.cross {
+    transform: rotate(45deg);
+    background-color: #3700b3;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.form-group input, .form-group button {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+#addBtn {
+    background-color: #6200ee;
+    color: #ffffff;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#addBtn:hover {
+    background-color: #3700b3;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid #444;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease, text-decoration 0.3s ease;
+    position: relative;
+}
+
+li.completed {
+    background-color: #006400;
+    text-decoration: line-through;
+}
+
+.checkbox {
+    cursor: pointer;
+}
+
 .sort-wrapper {
     position: relative;
     display: inline-block;
