@@ -8,34 +8,37 @@
 </head>
 <body>
     <div class="container">
-        <!-- Levá část -->
-        <div class="left-section">
+        <!-- Horní kontejner -->
+        <div class="header-container">
             <h1>Seznam půjček</h1>
             <button id="toggleFormBtn" class="plus">+</button>
-            <div class="form-group" id="form" style="display: none;">
-                <input type="date" id="datum">
-                <input type="text" id="jmeno" placeholder="Kdo dluží">
-                <input type="number" id="castka" placeholder="Částka" step="0.01" min="0">
-                <input type="text" id="popis" placeholder="Popis půjčky">
-                <button id="addBtn">Uložit</button>
+        </div>
+
+        <!-- Kontejner se seřazením a seznamem -->
+        <div class="main-container">
+            <div class="sort-container">
+                <div id="sortWrapper">
+                    <button id="sortToggle">Seřadit</button>
+                    <span id="sortArrow" class="arrow" data-order="asc">▲</span>
+                    <div id="sortMenu" class="sort-menu" style="display: none;">
+                        <button class="sort-option" data-sort="datum">Podle datumu</button>
+                        <button class="sort-option" data-sort="jmeno">Podle jména</button>
+                        <button class="sort-option" data-sort="castka">Podle částky</button>
+                    </div>
+                </div>
             </div>
             <ul id="seznam"></ul>
         </div>
 
-        <!-- Pravá část (Třídění) -->
-        <div class="right-section">
-            <div id="sortContainer">
-                <button id="sortToggle">Seřadit</button>
-                <span id="sortArrow" class="arrow" data-order="asc">▲</span>
-                <div id="sortMenu" class="sort-menu" style="display: none;">
-                    <button class="sort-option" data-sort="datum">Podle datumu</button>
-                    <button class="sort-option" data-sort="jmeno">Podle jména</button>
-                    <button class="sort-option" data-sort="castka">Podle částky</button>
-                </div>
-            </div>
+        <!-- Formulář na přidání -->
+        <div class="form-group" id="form" style="display: none;">
+            <input type="date" id="datum">
+            <input type="text" id="jmeno" placeholder="Kdo dluží">
+            <input type="number" id="castka" placeholder="Částka" step="0.01" min="0">
+            <input type="text" id="popis" placeholder="Popis půjčky">
+            <button id="addBtn">Uložit</button>
         </div>
     </div>
     <script src="script.js"></script>
 </body>
 </html>
-
