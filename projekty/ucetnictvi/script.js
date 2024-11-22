@@ -12,39 +12,24 @@ document.getElementById('addBtn').addEventListener('click', function () {
 
     if (jmeno && castka && popis) {
         const li = document.createElement('li');
-        li.innerHTML = `
-            <span>${datum} - ${jmeno} dluží ${castka} Kč: ${popis}</span>
-            <input type="checkbox" class="checkbox">
-        `;
-
-        li.querySelector('.checkbox').addEventListener('change', function () {
-            li.classList.toggle('completed');
-        });
+        li.innerHTML = `<span>${datum} - ${jmeno} dluží ${castka} Kč: ${popis}</span><input type="checkbox" class="checkbox">`;
 
         document.getElementById('seznam').appendChild(li);
 
-        // Reset form inputs
         document.getElementById('datum').value = '';
         document.getElementById('jmeno').value = '';
         document.getElementById('castka').value = '';
         document.getElementById('popis').value = '';
-
-        // Hide form and menu
-        document.getElementById('form').style.display = 'none';
-        document.getElementById('toggleFormBtn').classList.remove('cross');
-        document.getElementById('sortMenu').style.display = 'none';
     } else {
         alert('Vyplňte všechny údaje.');
     }
 });
 
-// Handle sort arrow click
 document.getElementById('sortArrow').addEventListener('click', function () {
     const order = this.dataset.order;
     this.dataset.order = order === 'asc' ? 'desc' : 'asc';
 });
 
-// Handle sort menu options
 document.querySelectorAll('.sort-option').forEach(option => {
     option.addEventListener('click', function () {
         const sortKey = this.dataset.sort;
@@ -58,19 +43,11 @@ document.querySelectorAll('.sort-option').forEach(option => {
                 : sortKey === 'castka'
                 ? [parseFloat(a.textContent.split('dluží')[1]), parseFloat(b.textContent.split('dluží')[1])]
                 : [a.textContent.split(' - ')[1], b.textContent.split(' - ')[1]];
+
             return order === 'asc' ? fieldA > fieldB ? 1 : -1 : fieldA < fieldB ? 1 : -1;
         });
 
         ul.innerHTML = '';
         items.forEach(item => ul.appendChild(item));
-
-        // Hide sort menu after sorting
-        document.getElementById('sortMenu').style.display = 'none';
     });
-});
-
-// Hide menu when mouse leaves the sort area
-const sortContainer = document.getElementById('sortContainer');
-sortContainer.addEventListener('mouseleave', function () {
-    document.getElementById('sortMenu').style.display = 'none';
 });
