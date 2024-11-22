@@ -8,15 +8,8 @@
 </head>
 <body>
     <div class="container">
-        <!-- Horní kontejner -->
-        <div class="header-container">
-            <h1>Seznam půjček</h1>
-        </div>
-        <div class="plus-container">
-            <button id="toggleFormBtn" class="plus">+</button>
-        </div>
-
-        <!-- Formulář na přidání -->
+        <h1>Seznam půjček</h1>
+        <button id="toggleFormBtn" class="plus">+</button>
         <div class="form-group" id="form" style="display: none;">
             <input type="date" id="datum">
             <input type="text" id="jmeno" placeholder="Kdo dluží">
@@ -25,21 +18,19 @@
             <button id="addBtn">Uložit</button>
         </div>
 
-        <!-- Kontejner se seřazením a seznamem -->
-        <div class="main-container">
-            <div class="sort-container">
-                <div id="sortWrapper">
-                    <button id="sortToggle">Seřadit</button>
-                    <span id="sortArrow" class="arrow" data-order="asc">▲</span>
-                    <div id="sortMenu" class="sort-menu" style="display: none;">
-                        <button class="sort-option" data-sort="datum">Podle datumu</button>
-                        <button class="sort-option" data-sort="jmeno">Podle jména</button>
-                        <button class="sort-option" data-sort="castka">Podle částky</button>
-                    </div>
+        <div class="sort-wrapper">
+            <div id="sortContainer">
+                <button id="sortToggle">Seřadit</button>
+                <span id="sortArrow" class="arrow" data-order="asc">▲</span>
+                <div id="sortMenu" class="sort-menu" style="display: none;">
+                    <button class="sort-option" data-sort="datum">Podle datumu</button>
+                    <button class="sort-option" data-sort="jmeno">Podle jména</button>
+                    <button class="sort-option" data-sort="castka">Podle částky</button>
                 </div>
             </div>
-            <ul id="seznam"></ul>
         </div>
+
+        <ul id="seznam"></ul>
     </div>
     <script src="script.js"></script>
 </body>
