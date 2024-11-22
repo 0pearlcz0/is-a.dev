@@ -92,10 +92,16 @@ li.completed {
     cursor: pointer;
 }
 
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
 .sort-wrapper {
     position: relative;
     display: inline-block;
-    margin-bottom: 20px;
+    margin-left: 20px;
 }
 
 #sortToggle {
