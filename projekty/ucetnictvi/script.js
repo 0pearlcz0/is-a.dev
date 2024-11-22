@@ -1,9 +1,10 @@
+// Obsluha zobrazení/skrytí formuláře
 document.getElementById('toggleFormBtn').addEventListener('click', function () {
     const form = document.getElementById('form');
     form.style.display = form.style.display === 'none' ? 'block' : 'none';
-    this.classList.toggle('cross');
 });
 
+// Přidání nové položky
 document.getElementById('addBtn').addEventListener('click', function () {
     const datum = document.getElementById('datum').value || new Date().toISOString().split('T')[0];
     const jmeno = document.getElementById('jmeno').value;
@@ -14,42 +15,61 @@ document.getElementById('addBtn').addEventListener('click', function () {
         const li = document.createElement('li');
         li.innerHTML = `
             <span>${datum} - ${jmeno} dluží ${castka} Kč: ${popis}</span>
-            <div class="settings">•••
+            <input type="checkbox" class="checkbox">
+            <div class="settings">
+                <span>⋮</span>
                 <div class="settings-menu">
-                    <button class="settings-option" onclick="editItem(this)">Upravit</button>
-                    <button class="settings-option" onclick="deleteItem(this)">Odstranit</button>
+                    <button class="settings-option settings-edit">Upravit</button>
+                    <button class="settings-option settings-delete">Smazat</button>
                 </div>
             </div>
         `;
+
         document.getElementById('seznam').appendChild(li);
-        document.getElementById('form').style.display = 'none';
-        document.getElementById('toggleFormBtn').classList.remove('cross');
+
+        // Reset formuláře
+        document.getElementById('datum').value = '';
+        document.getElementById('jmeno').value = '';
+        document.getElementById('castka').value = '';
+        document.getElementById('popis').value = '';
     } else {
         alert('Vyplňte všechny údaje.');
     }
 });
 
-document.getElementById('sortArrow').addEventListener('click', function () {
-    const order = this.dataset.order;
-    this.dataset.order = order === 'asc' ? 'desc' : 'asc';
-    this.textContent = order === 'asc' ? '▼' : '▲';
+// Funkce pro označení řádku jako přečteného
+document.getElementById('seznam').addEventListener('change', function (e) {
+    if (e.target.classList.contains('checkbox')) {
+        const li = e.target.closest('li');
+        li.classList.toggle('completed');
+    }
 });
 
-function deleteItem(btn) {
-    if (confirm('Opravdu chcete odstranit tuto položku?')) {
-        btn.closest('li').remove();
+// Funkce pro tlačítko Upravit
+document.getElementById('seznam').addEventListener('click', function (e) {
+    if (e.target.classList.contains('settings-edit')) {
+        const li = e.target.closest('li');
+        const content = li.querySelector('span').textContent;
+
+        const [datum, jmenoCastka] = content.split(' - ');
+        const [jmeno, castkaPopis] = jmenoCastka.split(' dluží ');
+        const [castka, popis] = castkaPopis.split(': ');
+
+        document.getElementById('datum').value = datum.trim();
+        document.getElementById('jmeno').value = jmeno.trim();
+        document.getElementById('castka').value = castka.trim();
+        document.getElementById('popis').value = popis.trim();
+
+        li.remove();
     }
-}
+});
 
-function editItem(btn) {
-    const li = btn.closest('li');
-    const [datum, jmeno, castka, popis] = li.querySelector('span').textContent.split(' - ')[1].split(' dluží ')[0].split(': ');
-
-    document.getElementById('datum').value = datum.trim();
-    document.getElementById('jmeno').value = jmeno.trim();
-    document.getElementById('castka').value = castka.trim();
-    document.getElementById('popis').value = popis.trim();
-
-    li.remove();
-    document.getElementById('form').style.display = 'block';
-}
+// Funkce pro tlačítko Smazat
+document.getElementById('seznam').addEventListener('click', function (e) {
+    if (e.target.classList.contains('settings-delete')) {
+        const li = e.target.closest('li');
+        if (confirm('Opravdu chcete tuto položku smazat?')) {
+            li.remove();
+        }
+    }
+});
