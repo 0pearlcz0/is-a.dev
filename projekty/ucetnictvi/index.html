@@ -8,20 +8,32 @@
 </head>
 <body>
     <div class="container">
-        <h1>Seznam půjček</h1>
-        <!-- Tlačítko + -->
-        <button id="toggleFormBtn" class="plus">+</button>
-        <!-- Formulář pro přidání nové položky -->
-        <div class="form-group" id="form" style="display: none;">
-            <input type="date" id="datum">
-            <input type="text" id="jmeno" placeholder="Kdo dluží">
-            <input type="number" id="castka" placeholder="Částka" step="0.01" min="0">
-            <input type="text" id="popis" placeholder="Popis půjčky">
-            <button id="addBtn">Uložit</button>
+        <!-- Levá část -->
+        <div class="left-section">
+            <h1>Seznam půjček</h1>
+            <button id="toggleFormBtn" class="plus">+</button>
+            <div class="form-group" id="form" style="display: none;">
+                <input type="date" id="datum">
+                <input type="text" id="jmeno" placeholder="Kdo dluží">
+                <input type="number" id="castka" placeholder="Částka" step="0.01" min="0">
+                <input type="text" id="popis" placeholder="Popis půjčky">
+                <button id="addBtn">Uložit</button>
+            </div>
+            <ul id="seznam"></ul>
         </div>
 
-        <!-- Seznam položek -->
-        <ul id="seznam"></ul>
+        <!-- Pravá část (Třídění) -->
+        <div class="right-section">
+            <div id="sortContainer">
+                <button id="sortToggle">Seřadit</button>
+                <span id="sortArrow" class="arrow" data-order="asc">▲</span>
+                <div id="sortMenu" class="sort-menu" style="display: none;">
+                    <button class="sort-option" data-sort="datum">Podle datumu</button>
+                    <button class="sort-option" data-sort="jmeno">Podle jména</button>
+                    <button class="sort-option" data-sort="castka">Podle částky</button>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
