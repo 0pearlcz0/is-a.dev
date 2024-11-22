@@ -29,6 +29,12 @@ document.getElementById('addBtn').addEventListener('click', function () {
     }
 });
 
+document.getElementById('sortArrow').addEventListener('click', function () {
+    const order = this.dataset.order;
+    this.dataset.order = order === 'asc' ? 'desc' : 'asc';
+    this.textContent = order === 'asc' ? '▼' : '▲';
+});
+
 function deleteItem(btn) {
     if (confirm('Opravdu chcete odstranit tuto položku?')) {
         btn.closest('li').remove();
@@ -36,10 +42,14 @@ function deleteItem(btn) {
 }
 
 function editItem(btn) {
-    alert('Funkce pro úpravu není ještě implementována.');
-}
+    const li = btn.closest('li');
+    const [datum, jmeno, castka, popis] = li.querySelector('span').textContent.split(' - ')[1].split(' dluží ')[0].split(': ');
 
-document.getElementById('sortArrow').addEventListener('click', function () {
-    const order = this.dataset.order;
-    this.dataset.order = order === 'asc' ? 'desc' : 'asc';
-});
+    document.getElementById('datum').value = datum.trim();
+    document.getElementById('jmeno').value = jmeno.trim();
+    document.getElementById('castka').value = castka.trim();
+    document.getElementById('popis').value = popis.trim();
+
+    li.remove();
+    document.getElementById('form').style.display = 'block';
+}
