@@ -2,45 +2,31 @@ body {
     background-color: #121212;
     color: #ffffff;
     font-family: Arial, sans-serif;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: flex-start;
     height: 100vh;
-    margin: 0;
 }
 
 .container {
+    width: 600px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 20px;
 }
 
-.left-section {
-    flex: 2;
-    max-width: 600px;
-    padding: 20px;
-    border: 1px solid #444;
-    border-radius: 8px;
-    background-color: #1e1e1e;
-}
-
-.right-section {
-    flex: 1;
-    padding: 20px;
-    border: 1px solid #444;
-    border-radius: 8px;
-    background-color: #1e1e1e;
-    height: fit-content;
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 h1 {
-    text-align: center;
-    margin-bottom: 20px;
+    margin: 0;
 }
 
 #toggleFormBtn {
-    display: block;
-    margin: 0 auto 20px auto;
     background: linear-gradient(45deg, #6200ee, #ff0000, #00ff00);
     background-size: 300% 300%;
     animation: gradient-animation 5s infinite;
@@ -66,40 +52,41 @@ h1 {
     transform: rotate(45deg);
 }
 
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    transition: all 0.3s ease;
+.main-container {
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #1e1e1e;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+.sort-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
 }
 
-li {
-    padding: 10px;
-    border-bottom: 1px solid #444;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#sortWrapper {
     position: relative;
 }
 
-.settings {
+#sortToggle {
+    background-color: #6200ee;
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
     cursor: pointer;
-    margin-left: 10px;
-    color: #999;
+    transition: background-color 0.3s ease;
 }
 
-.settings:hover {
-    color: #fff;
+#sortToggle:hover {
+    background-color: #3700b3;
 }
 
 .arrow {
     font-size: 20px;
     cursor: pointer;
+    margin-left: 10px;
     transition: transform 0.3s ease;
 }
 
@@ -139,6 +126,63 @@ li {
     background-color: #444444;
 }
 
-#sortContainer:hover #sortMenu {
+#sortWrapper:hover #sortMenu {
     display: flex;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 10px;
+    border-bottom: 1px solid #444;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.settings {
+    cursor: pointer;
+    margin-left: 10px;
+    color: #999;
+}
+
+.settings:hover {
+    color: #fff;
+}
+
+.settings-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: none;
+    background-color: #333333;
+    border: 1px solid #444;
+    border-radius: 4px;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    z-index: 100;
+}
+
+li:hover .settings-menu {
+    display: flex;
+}
+
+.settings-option {
+    background: none;
+    border: none;
+    color: #ffffff;
+    padding: 10px;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.settings-option:hover {
+    background-color: #444444;
 }
