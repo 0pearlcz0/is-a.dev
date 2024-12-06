@@ -1,1 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 
+// Obecné nastavení stylů
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Výška stránky */
+  background-color: #000; /* Černé pozadí */
+  color: #fff; /* Bílý text */
+  font-family: 'Roboto Mono', monospace; /* Písmo */
+  box-sizing: border-box;
+}
+
+// Kontejner pro text
+.container {
+  display: flex; /* Flexbox pro zarovnání */
+  justify-content: center; /* Horizontální zarovnání na střed */
+  align-items: center; /* Vertikální zarovnání na střed */
+  height: 100%; /* Kontejner přes celou výšku stránky */
+  text-align: center; /* Text na střed */
+}
+
+// Styly pro samotný text
+p {
+  font-size: 24px; /* Velikost textu */
+  letter-spacing: 0.5px; /* Mezera mezi písmeny */
+  margin: 0; /* Odstranění okrajů */
+  opacity: 0; /* Na začátku neviditelný, animace ho zobrazí */
+}
