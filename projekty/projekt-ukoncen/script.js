@@ -1,36 +1,44 @@
-var $copyContainer = $(".copy-container"),
-    $replayIcon = $('#cb-replay'),
-    $copyWidth = $('.copy-container').find('p').width();
+// Po načtení DOM spustíme animaci
+document.addEventListener("DOMContentLoaded", () => {
+  // Najdeme element s textem
+  const text = document.querySelector(".copy-container p");
 
-var mySplitText = new SplitText($copyContainer, {type:"words"}),
-    splitTextTimeline = new TimelineMax();
-var handleTL = new TimelineMax();
+  // Inicializujeme animaci pomocí GSAP
+  gsap.fromTo(
+    text, // Element k animaci
+    { 
+      opacity: 0,  // Počáteční průhlednost
+      y: 20        // Text začne o 20px níže
+    },
+    { 
+      opacity: 1,  // Konečná průhlednost
+      y: 0,        // Text se vrátí na původní pozici
+      duration: 2, // Trvání animace v sekundách
+      ease: "power2.out" // Plynulý výstup
+    }
+  );
 
-// WIP - need to clean up, work on initial state and handle issue with multiple lines on mobile
+  // Přidáme tlačítko pro opětovné spuštění animace (volitelné)
+  const replayButton = document.createElement("button");
+  replayButton.textContent = "Znovu přehrát animaci";
+  replayButton.style.cssText = `
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #ffe500;
+    color: #000;
+    border-radius: 5px;
+  `;
+  document.body.appendChild(replayButton);
 
-var tl = new TimelineMax();
-
-tl.add(function(){
-  animateCopy();
-  blinkHandle();
-}, 0.2)
-
-function animateCopy() {
-  mySplitText.split({type:"chars, words"}) 
-  splitTextTimeline.staggerFrom(mySplitText.chars, 0.001, {autoAlpha:0, ease:Back.easeInOut.config(1.7), onComplete: function(){
-    animateHandle()
-  }}, 0.05);
-}
-
-function blinkHandle() {
-  handleTL.fromTo('.handle', 0.4, {autoAlpha:0},{autoAlpha:1, repeat:-1, yoyo:true}, 0);
-}
-
-function animateHandle() {
-  handleTL.to('.handle', 0.7, {x:$copyWidth, ease:SteppedEase.config(12)}, 0.05);
-}
-
-$('#cb-replay').on('click', function(){
-  splitTextTimeline.restart()
-  handleTL.restart()
-})
+  // Připojíme událost kliknutí k tlačítku
+  replayButton.addEventListener("click", () => {
+    gsap.fromTo(
+      text,
+      { opacity: 0, y: 20 },
+      { opacity: 1, y: 0, duration: 2, ease: "power2.out" }
+    );
+  });
+});
