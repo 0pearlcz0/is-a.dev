@@ -1,3 +1,4 @@
+/* Globální styl */
 body {
     font-family: Arial, sans-serif;
     background-color: black;
@@ -21,7 +22,6 @@ header nav ul li {
 header nav ul li a {
     color: white;
     text-decoration: none;
-    padding: 0px;
 }
 
 main {
@@ -29,6 +29,7 @@ main {
     text-align: center;
 }
 
+/* Kontejnery projektů */
 .project-container {
     display: flex;
     flex-direction: column;
@@ -36,37 +37,22 @@ main {
     gap: 20px;
 }
 
-.project-container2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
+/* Karty projektů */
 .project-card {
     display: flex;
     align-items: center;
     background-color: #333;
     border-radius: 10px;
     overflow: hidden;
-    width: 75%; /* Zabírá 75 % šířky */
-    max-width: 800px; /* Maximální šířka */
+    width: 75%;
+    max-width: 800px;
     cursor: pointer;
     transition: transform 0.3s;
     padding: 10px;
 }
 
-.project-card2 {
-    display: flex;
-    align-items: center;
-    background-color: #565555;
-    border-radius: 10px;
-    overflow: hidden;
-    width: 75%; /* Zabírá 75 % šířky */
-    max-width: 800px; /* Maximální šířka */
-    cursor: pointer;
-    transition: transform 0.3s;
-    padding: 10px;
+.project-card.canceled {
+    background-color: #4a4a4a; /* Světlejší barva */
 }
 
 .project-card:hover {
@@ -74,13 +60,13 @@ main {
 }
 
 .project-icon {
-    width: 100px; /* Nastavuje šířku ikony */
+    width: 100px;
     height: auto;
-    margin-right: 15px; /* Mezery mezi ikonou a textem */
+    margin-right: 15px;
 }
 
 .project-content {
-    text-align: left; /* Zarovnání textu vlevo */
+    text-align: left;
 }
 
 .project-content h2 {
