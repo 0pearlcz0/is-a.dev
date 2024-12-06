@@ -52,7 +52,7 @@ main {
 .project-card2 {
     display: flex;
     align-items: center;
-    background-color: #adadad;
+    background-color: #616060;
     border-radius: 10px;
     overflow: hidden;
     width: 75%; /* Zabírá 75 % šířky */
