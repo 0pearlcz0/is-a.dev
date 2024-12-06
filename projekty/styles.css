@@ -36,6 +36,13 @@ main {
     gap: 20px;
 }
 
+.project-container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
 .project-card {
     display: flex;
     align-items: center;
