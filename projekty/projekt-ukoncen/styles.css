@@ -4,50 +4,26 @@
 html, body {
   margin: 0;
   padding: 0;
-  height: 100%;
-  font-family: 'Roboto Mono', monospace;
-  display: flex; /* Flexbox pro centrování */
-  justify-content: center; /* Horizontální vycentrování */
-  align-items: center; /* Vertikální vycentrování */
+  height: 100%; /* Výška stránky */
   background-color: #000; /* Černé pozadí */
   color: #fff; /* Bílý text */
+  font-family: 'Roboto Mono', monospace; /* Písmo */
   box-sizing: border-box;
-}
-
-// Nastavení pro celou stránku
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
 }
 
 // Kontejner pro text
 .container {
-  text-align: center; /* Zarovnání textu na střed */
+  display: flex; /* Flexbox pro zarovnání */
+  justify-content: center; /* Horizontální zarovnání na střed */
+  align-items: center; /* Vertikální zarovnání na střed */
+  height: 100%; /* Kontejner přes celou výšku stránky */
+  text-align: center; /* Text na střed */
 }
 
-// Styly pro odstavec s textem
+// Styly pro samotný text
 p {
-  font-size: 24px; /* Velikost písma */
+  font-size: 24px; /* Velikost textu */
   letter-spacing: 0.5px; /* Mezera mezi písmeny */
   margin: 0; /* Odstranění okrajů */
-  opacity: 0; /* Text je na začátku neviditelný, animace ho zobrazí */
-  transition: opacity 0.3s ease; /* Plynulý přechod pro zobrazení textu */
-}
-
-// Volitelné tlačítko pro restart animace (pokud se použije z JS)
-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  border: none;
-  background-color: #ffe500; /* Světle žlutá barva */
-  color: #000; /* Černý text */
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #ffd700; /* Tmavší žlutá při najetí myší */
+  opacity: 0; /* Na začátku neviditelný, animace ho zobrazí */
 }
