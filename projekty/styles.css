@@ -49,6 +49,19 @@ main {
     padding: 10px;
 }
 
+.project-card {
+    display: flex;
+    align-items: center;
+    background-color: #e1e4e4;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 75%; /* Zabírá 75 % šířky */
+    max-width: 800px; /* Maximální šířka */
+    cursor: pointer;
+    transition: transform 0.3s;
+    padding: 10px;
+}
+
 .project-card:hover {
     transform: scale(1.05);
 }
