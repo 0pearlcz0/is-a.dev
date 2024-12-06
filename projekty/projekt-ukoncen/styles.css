@@ -1,46 +1,27 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 
-// helper
-.center-xy {
-  // width: inherit;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  position: absolute;
-}
-
+// Pomocné styly
 html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
   font-family: 'Roboto Mono', monospace;
-  font-size: 16px;
-}
-
-html {
-  box-sizing: border-box;
-  user-select: none;
-}
-
-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #000;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
+  color: #fff;
 }
 
 .container {
-  width: 100%;
-}
-
-.copy-container {
   text-align: center;
 }
 
 p {
-  color: #fff;
   font-size: 24px;
-  letter-spacing: .2px;
-  margin: 0;
+  letter-spacing: 0.5px;
 }
+
 
 .handle {
   background: #ffe500;
