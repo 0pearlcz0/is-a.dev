@@ -52,15 +52,6 @@ p {
   position: absolute;
 }
 
-#cb-replay {
-  fill: #666;
-  width: 20px;
-  margin: 15px;
-  right: 0;
-  bottom: 0;
-  position: absolute;
-  overflow: inherit;
-  cursor: pointer;
 
   &:hover {
     fill: #888;
