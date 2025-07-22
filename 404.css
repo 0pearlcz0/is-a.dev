@@ -2,7 +2,7 @@
   background: linear-gradient(-45deg, #fff300, #efe400);
   position: fixed;
   left: 0px;
-  top: 0;
+  top: 0px;
   width: 100%;
   height: 100%;
   line-height: 1.5em;
@@ -18,7 +18,7 @@
   direction: rtl;
 }
 #oopss #error-text img {
-  margin: 15px auto 20px;
+  margin: 85px auto 20px;
   height: 342px;
 }
 #oopss #error-text span {
